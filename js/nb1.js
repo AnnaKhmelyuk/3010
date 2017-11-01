@@ -1,20 +1,28 @@
-function myFunction(num1, num2) {
-var num1, num2, result;
- 	num1 = document.getElementById("n1").value;
- 	num1 = parseInt(num1);
-	num2 = document.getElementById("n2").value;
-	num2 = parseInt(num2);
-	if (num1 % 2) === 0 i (y % 2) === 0 {
-	result = ("both odd");
+function myFunction() {
+	var x, y, result
+	x = document.getElementById('n1').value;
+	x = parseInt(x);
+
+	y = document.getElementById('n2').value;
+	y = parseInt(y);
+
+	if ((x % 2) === 0) {
+		if ((y % 2) === 0) {
+		result = ('обидва парні');
+		}
+		else if ((y % 2) != 0) {
+		result = ('тільки перше парне')
+		}
 	}
-	else if (((num1 % 2) === 0); ((num2 % 2) != 0)) {
-	result = ("first odd,second even");
+	else if ((x % 2) != 0) {
+		if ((y % 2) === 0) {
+			result = ('тільки друге парне')
+		}
+		else if ((y % 2) != 0) {
+		result = ("обидва непарні")	
+		}
 	}
-	else if (((num1 % 2) != 0);((num2 % 2) === 0)) {
-	result = ("first even,second odd");
+	document.getElementById('out').innerHTML = result;
+
 	}
-	else (((num1 % 2) != 0); ((num2 % 2) != 0)) {
-	result = ("both even");
-	}
-	document.getElementById("out").innerHTML = result;
-}
+
